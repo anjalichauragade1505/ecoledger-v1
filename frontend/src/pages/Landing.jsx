@@ -191,7 +191,8 @@ export default function Landing() {
             zoomControl={false} attributionControl={false}
           >
             <TileLayer
-              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}"
+              maxZoom={16}
             />
             {(summary?.city_points || []).map((city, i) => (
               <CircleMarker key={i}
